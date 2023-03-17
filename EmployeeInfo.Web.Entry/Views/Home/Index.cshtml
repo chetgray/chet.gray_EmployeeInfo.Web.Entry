@@ -63,5 +63,10 @@
             </div>
             <input class="primaryButton" id="submitButton" type="submit" value="Submit" />
         </form>
+        <div>
+            <div class="modalDiv" id="framedUrlModalWindow"><iframe></iframe></div>
+            <input class="smallDefaultButton" id="supportButton" type="submit" value="Contact Support"
+                   onclick="showModal(800, 600, '@Url.Action("Support", "Home")', 'Contact Support', true);" />
+        </div>
     </div>
 </div>

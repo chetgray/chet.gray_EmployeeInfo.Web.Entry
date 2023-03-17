@@ -8,5 +8,10 @@ namespace EmployeeInfo.Web.Entry.Controllers
         {
             return View();
         }
+
+        public ActionResult Support()
+        {
+            return View();
+        }
     }
 }

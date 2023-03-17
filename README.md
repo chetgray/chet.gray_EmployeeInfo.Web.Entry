@@ -31,13 +31,13 @@ Requirements:
   - [x] Product / IT
   - [x] Growth
   - [x] Marketing
-- [ ] The page should have have a button for "Contact Support". The
+- [x] The page should have have a button for "Contact Support". The
   button type should be a Waystar Standard button.
-  - [ ] Upon clicking the button, show a Waystar Standard iFrame linking
+  - [x] Upon clicking the button, show a Waystar Standard iFrame linking
     with the contents of a Support page within your app.
-  - [ ] The iFrame should use the Waystar pop-out button to open the
+  - [x] The iFrame should use the Waystar pop-out button to open the
     Support page in a new window a well.
-  - [ ] Be sure to use MVC routing here, not href hyperlinks.
+  - [x] Be sure to use MVC routing here, not href hyperlinks.
 - [x] Upon clicking of the Submit button, display a Waystar Modal-Pop up
   stating "Entry Accepted."
 
