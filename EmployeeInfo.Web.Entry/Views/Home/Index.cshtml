@@ -9,7 +9,7 @@
     </div>
     <div id="leftSide"></div>
     <div id="rightSide">
-        <form class="mainForm" id="EmployeeInfoEntryForm">
+        <form class="mainForm" id="employeeInfoEntryForm">
             <div>
                 <label for="employeeFirstName">First Name</label>
                 <span class="tooltip-popup icon-info-circle" data-popup-content-text="Employee's first name."
@@ -44,16 +44,13 @@
                     <span>Department</span>
                     <ul class="mainDropMenu shadow">
                         <li>
-                            <a id="productItDepartmentActionButton" href="#"
-                               onclick="return false;">Product / IT</a>
+                            <a id="productItDepartmentActionButton" data-department="Product / IT">Product / IT</a>
                         </li>
                         <li>
-                            <a id="growthDepartmentActionButton" href="#"
-                               onclick="return false;">Growth</a>
+                            <a id="growthDepartmentActionButton" data-department="Growth" >Growth</a>
                         </li>
                         <li>
-                            <a id="marketingDepartmentActionButton" href="#"
-                               onclick="return false;">Marketing</a>
+                            <a id="marketingDepartmentActionButton" data-department="Marketing">Marketing</a>
                         </li>
                     </ul>
                 </div>
