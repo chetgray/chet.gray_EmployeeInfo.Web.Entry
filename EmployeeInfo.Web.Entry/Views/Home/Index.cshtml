@@ -12,19 +12,28 @@
         <form class="mainForm" id="EmployeeInfoEntryForm">
             <div>
                 <label for="employeeFirstName">First Name</label>
+                <span class="tooltip-popup icon-info-circle" data-popup-content-text="Employee's first name."
+                      data-popup-position="right"></span>
                 <input id="employeeFirstName" name="employeeFirstName" type="text" />
             </div>
             <div>
                 <label for="employeeLastName">Last Name</label>
+                <span class="tooltip-popup icon-info-circle" data-popup-content-text="Employee's last name."
+                      data-popup-position="right"></span>
                 <input id="employeeLastName" name="employeeLastName" type="text" />
             </div>
             <div>
                 <label for="employeePhoneNumber">Phone Number</label>
+                <span class="tooltip-popup icon-info-circle" data-popup-content-text="Employee's phone number."
+                      data-popup-position="right"></span>
                 <input id="employeePhoneNumber" name="employeePhoneNumber"
                        data-masktext="(999) 999-9999" type="text" />
             </div>
             <div>
                 <label for="employeeStartDate">Start Date</label>
+                <span class="tooltip-popup icon-info-circle"
+                      data-popup-content-text="Employee's start date. Must be in mm/dd/yyyy format."
+                      data-popup-position="right"></span>
                 <div class="datePicker">
                     <input id="employeeStartDate" name="employeeStartDate"
                            data-hinttext="mm/dd/yyyy" type="text" />
@@ -48,6 +57,8 @@
                         </li>
                     </ul>
                 </div>
+                <span class="tooltip-popup icon-info-circle" data-popup-content-text="Employee's department."
+                      data-popup-position="right"></span>
                 <input id="employeeDepartment" name="employeeDepartment" type="text" disabled />
             </div>
             <input class="primaryButton" id="submitButton" type="submit" value="Submit"

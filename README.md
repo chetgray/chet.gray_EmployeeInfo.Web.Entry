@@ -20,7 +20,7 @@ Requirements:
 - [x] Each field on the form should use the Web Controls Input Field Control.
 - [x] The form should have a submit button, which should use the Web
   Controls Primary Button Control.
-- [ ] Each field, except for the submit button, should have a Web
+- [x] Each field, except for the submit button, should have a Web
   Controls hover-style tooltip.
 - [x] The Employee Phone Number field should use the Web Controls Phone
   Number control.
