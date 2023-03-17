@@ -1,8 +1,57 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Employee Information Entry";
 }
 <div class="controlContainer">
-    <div class="PageHeading"></div>
+    <div class="PageHeading">
+        <h1 class="heading-standard" id="pageHeading">@ViewBag.Title</h1>
+        <div id="pageHeadingLinks"></div>
+        <div class="clearfix"></div>
+    </div>
     <div id="leftSide"></div>
-    <div id="rightSide"></div>
+    <div id="rightSide">
+        <form class="mainForm" id="EmployeeInfoEntryForm">
+            <div>
+                <label for="employeeFirstName">First Name</label>
+                <input id="employeeFirstName" name="employeeFirstName" type="text" />
+            </div>
+            <div>
+                <label for="employeeLastName">Last Name</label>
+                <input id="employeeLastName" name="employeeLastName" type="text" />
+            </div>
+            <div>
+                <label for="employeePhoneNumber">Phone Number</label>
+                <input id="employeePhoneNumber" name="employeePhoneNumber"
+                       data-masktext="(999) 999-9999" type="text" />
+            </div>
+            <div>
+                <label for="employeeStartDate">Start Date</label>
+                <div class="datePicker">
+                    <input id="employeeStartDate" name="employeeStartDate"
+                           data-hinttext="mm/dd/yyyy" type="text" />
+                </div>
+            </div>
+            <div>
+                <div class="actionButtonDropMenu actionButton" id="departmentDropMenu">
+                    <span>Department</span>
+                    <ul class="mainDropMenu shadow">
+                        <li>
+                            <a id="productItDepartmentActionButton" href="#"
+                               onclick="return false;">Product / IT</a>
+                        </li>
+                        <li>
+                            <a id="growthDepartmentActionButton" href="#"
+                               onclick="return false;">Growth</a>
+                        </li>
+                        <li>
+                            <a id="marketingDepartmentActionButton" href="#"
+                               onclick="return false;">Marketing</a>
+                        </li>
+                    </ul>
+                </div>
+                <input id="employeeDepartment" name="employeeDepartment" type="text" disabled />
+            </div>
+            <input class="primaryButton" id="submitButton" type="submit" value="Submit"
+                   onclick="return false;" />
+        </form>
+    </div>
 </div>
