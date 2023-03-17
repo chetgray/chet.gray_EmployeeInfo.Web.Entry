@@ -1,33 +1,72 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Employee Information Entry";
 }
-
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
-
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+<div class="controlContainer">
+    <div class="PageHeading">
+        <h1 class="heading-standard" id="pageHeading">@ViewBag.Title</h1>
+        <div id="pageHeadingLinks"></div>
+        <div class="clearfix"></div>
     </div>
-</main>
+    <div id="leftSide"></div>
+    <div id="rightSide">
+        <form class="mainForm" id="EmployeeInfoEntryForm">
+            <div>
+                <label for="employeeFirstName">First Name</label>
+                <span class="tooltip-popup icon-info-circle" data-popup-content-text="Employee's first name."
+                      data-popup-position="right"></span>
+                <input id="employeeFirstName" name="employeeFirstName" type="text" />
+            </div>
+            <div>
+                <label for="employeeLastName">Last Name</label>
+                <span class="tooltip-popup icon-info-circle" data-popup-content-text="Employee's last name."
+                      data-popup-position="right"></span>
+                <input id="employeeLastName" name="employeeLastName" type="text" />
+            </div>
+            <div>
+                <label for="employeePhoneNumber">Phone Number</label>
+                <span class="tooltip-popup icon-info-circle" data-popup-content-text="Employee's phone number."
+                      data-popup-position="right"></span>
+                <input id="employeePhoneNumber" name="employeePhoneNumber"
+                       data-masktext="(999) 999-9999" type="text" />
+            </div>
+            <div>
+                <label for="employeeStartDate">Start Date</label>
+                <span class="tooltip-popup icon-info-circle"
+                      data-popup-content-text="Employee's start date. Must be in mm/dd/yyyy format."
+                      data-popup-position="right"></span>
+                <div class="datePicker">
+                    <input id="employeeStartDate" name="employeeStartDate"
+                           data-hinttext="mm/dd/yyyy" type="text" />
+                </div>
+            </div>
+            <div>
+                <div class="actionButtonDropMenu actionButton" id="departmentDropMenu">
+                    <span>Department</span>
+                    <ul class="mainDropMenu shadow">
+                        <li>
+                            <a id="productItDepartmentActionButton" href="#"
+                               onclick="return false;">Product / IT</a>
+                        </li>
+                        <li>
+                            <a id="growthDepartmentActionButton" href="#"
+                               onclick="return false;">Growth</a>
+                        </li>
+                        <li>
+                            <a id="marketingDepartmentActionButton" href="#"
+                               onclick="return false;">Marketing</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="tooltip-popup icon-info-circle" data-popup-content-text="Employee's department."
+                      data-popup-position="right"></span>
+                <input id="employeeDepartment" name="employeeDepartment" type="text" disabled />
+            </div>
+            <input class="primaryButton" id="submitButton" type="submit" value="Submit" />
+        </form>
+        <div>
+            <div class="modalDiv" id="framedUrlModalWindow"><iframe></iframe></div>
+            <input class="smallDefaultButton" id="supportButton" type="submit" value="Contact Support"
+                   onclick="showModal(800, 600, '@Url.Action("Support", "Home")', 'Contact Support', true);" />
+        </div>
+    </div>
+</div>
