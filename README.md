@@ -38,7 +38,7 @@ Requirements:
   - [ ] The iFrame should use the Waystar pop-out button to open the
     Support page in a new window a well.
   - [ ] Be sure to use MVC routing here, not href hyperlinks.
-- [ ] Upon clicking of the Submit button, display a Waystar Modal-Pop up
+- [x] Upon clicking of the Submit button, display a Waystar Modal-Pop up
   stating "Entry Accepted."
 
 **NOTE: You do NOT need to update a database for this - this

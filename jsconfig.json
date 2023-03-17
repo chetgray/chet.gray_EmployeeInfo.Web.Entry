@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "checkJs": true,
+    },
+    "exclude": [
+        "Scripts/bootstrap*",
+        "Scripts/jquery*",
+        "Scripts/modernizr*",
+    ],
+    "typeAcquisition": {
+        "enable": true,
+        "include": [
+            "jquery",
+            "jqueryui",
+        ],
+    },
+}
